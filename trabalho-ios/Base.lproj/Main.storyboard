@@ -19,23 +19,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2GB-1W-cIe">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-IL-mz3">
-                                        <rect key="frame" x="8" y="0.0" width="359" height="235"/>
+                                        <rect key="frame" x="8" y="8" width="358" height="80"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-wd-ikc">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notebook Samsung i7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-eP-8QN">
+                                                        <rect key="frame" x="8" y="30" width="168.5" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="R$ 3199,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-35-7yP">
+                                                        <rect key="frame" x="261" y="30" width="89" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="H7v-eP-8QN" firstAttribute="top" secondItem="zWA-wd-ikc" secondAttribute="top" constant="30" id="0NU-uC-tM6"/>
+                                                    <constraint firstAttribute="height" constant="80" id="4Wi-ED-T5X"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GT5-35-7yP" secondAttribute="trailing" constant="8" id="7ZV-io-s00"/>
+                                                    <constraint firstAttribute="bottom" secondItem="H7v-eP-8QN" secondAttribute="bottom" constant="29" id="Ad9-Kt-Xv3"/>
+                                                    <constraint firstItem="GT5-35-7yP" firstAttribute="top" secondItem="zWA-wd-ikc" secondAttribute="top" constant="30" id="Id4-sf-7Fn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="GT5-35-7yP" secondAttribute="bottom" constant="29" id="eBn-qw-QOq"/>
+                                                    <constraint firstItem="H7v-eP-8QN" firstAttribute="leading" secondItem="zWA-wd-ikc" secondAttribute="leading" constant="8" id="u0g-Dn-y06"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zWA-wd-ikc" firstAttribute="leading" secondItem="Zec-IL-mz3" secondAttribute="leading" id="Hnl-jB-oAQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="zWA-wd-ikc" secondAttribute="trailing" id="KDG-BN-AzL"/>
+                                            <constraint firstItem="zWA-wd-ikc" firstAttribute="top" secondItem="Zec-IL-mz3" secondAttribute="top" id="N9K-Ek-Z6O"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Zec-IL-mz3" firstAttribute="leading" secondItem="2GB-1W-cIe" secondAttribute="leading" constant="8" id="I1Q-2g-oiP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zec-IL-mz3" secondAttribute="trailing" constant="8" id="M2p-ID-idh"/>
+                                    <constraint firstItem="Zec-IL-mz3" firstAttribute="top" secondItem="2GB-1W-cIe" secondAttribute="top" constant="8" id="59S-RQ-FzV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zec-IL-mz3" secondAttribute="trailing" constant="8" id="exW-lh-dKH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zec-IL-mz3" secondAttribute="bottom" constant="8" id="g4X-Ma-bCS"/>
+                                    <constraint firstItem="Zec-IL-mz3" firstAttribute="leading" secondItem="2GB-1W-cIe" secondAttribute="leading" constant="8" id="phk-D2-SH9"/>
                                 </constraints>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_nossosprodutos.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Rf-pZg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_nossosprodutos.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Rf-pZg">
                                 <rect key="frame" x="0.0" y="64" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="s7t-tW-P5J"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zvw-Rf-pZg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AS3-Dp-jtT"/>
+                            <constraint firstItem="Zvw-Rf-pZg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cp2-wj-5Fo"/>
+                            <constraint firstItem="2GB-1W-cIe" firstAttribute="top" secondItem="Zvw-Rf-pZg" secondAttribute="bottom" id="FxJ-n7-E7L"/>
+                            <constraint firstItem="2GB-1W-cIe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Z6n-10-uBs"/>
+                            <constraint firstItem="2GB-1W-cIe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gdD-cR-s58"/>
+                            <constraint firstItem="2GB-1W-cIe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i22-kR-7BL"/>
+                            <constraint firstItem="Zvw-Rf-pZg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mms-er-Vuf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Produtos" id="dCI-UE-5Bo">
@@ -116,6 +163,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Bv-rk-Ocw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.8" y="117.39130434782609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tXA-QZ-I5F">
+            <objects>
+                <viewController id="53B-A4-2W4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wtc-Cw-Wx5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notebook Samsung i7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh4-xj-CAM">
+                                <rect key="frame" x="16" y="36" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 3199,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-ZM-UCp">
+                                <rect key="frame" x="233" y="622" width="126" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sQF-rb-If5">
+                                <rect key="frame" x="16" y="65" width="343" height="549"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">O notebook gamer Samsung Odyssey foi projetado para quem procura alta performance para games atuais. A combinação do processador Intel de sétima geração, 8GB de memória, 1TB de disco rígido com a placa de vídeo dedicada Nvidia GeForce® GTX 1060 oferece um altíssimo desempenho e qualidade gráfica incrível.Sua tela de LED Full HD antirreflexiva de 15,6'' só faz com que a experiência de se jogar por essa máquina se torne ainda mais memorável e se transforme em uma verdadeira imersão no game.Cada parte do notebook Samsung Odyssey foi pensada para proporcionar a melhor experiência gaming: fácil expansão de memória RAM e SSD, sistema de gerenciamento térmico Hexaflow, teclado retroiluminado, status de sistema e gravação de partidas em tempo real.Agora o jogo ficou sério. Sistema Operacional
+Windows 10 Home
+Processador
+Intel® Core™ i7 7700HQ (2.8 GHz até 3.8GHz 6 MB L3 Cache)
+Placa de Vídeo
+NVIDIA® GeForce® GTX 1050 com 4 GB de memória GDDR5 dedicada
+Tela
+15.6" Full HD LED (1920 x 1080) Antirreflexiva
+Memória
+8 GB DDR4
+Armazenamento
+1TB (5400 RPM)
+Cor
+Preto
+Multimídia
+Alto-falantes estéreo (1.5 W x 2)
+SoundAlive™
+Microfone integrado
+Webcam
+Rede
+Placa Wi-Fi 802.11 ac (1 x 1)
+Bluetooth v4.1
+Gigabit Ethernet [10 / 100 / 1000]
+Portas de Comunicação
+1 saída HDMI
+1 USB 3.0
+2 USB 2.0
+Leitor de cartão multimídia 3-em-1 (SD, SDHC, SDXC)
+1 saída fone de ouvido / entrada microfone (combo)
+1 Ethernet RJ45 (LAN)
+1 conector de energia
+Características para Digitação
+Teclado Português-BR Retroiluminado
+Teclado numérico integrado
+Clickpad
+Segurança
+Slot para trava padrão Kensington
+Módulo TPM
+Alimentação
+Fonte Adaptadora AC 120 W
+Bateria 43 Wh
+Dimensão (L x P x A)
+37.8 x 26 x 2.4 ~ 2.82 cm
+Peso
+2.52 Kg
+Software
+Samsung Recovery
+Samsung Settings
+Simple Sharing
+Samsung Update
+※ Os softwares estão sujeitos a mudanças sem aviso prévio.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sQF-rb-If5" firstAttribute="top" secondItem="Nh4-xj-CAM" secondAttribute="bottom" constant="8" id="4wk-ai-ci2"/>
+                            <constraint firstItem="sQF-rb-If5" firstAttribute="leading" secondItem="ajk-PU-1HG" secondAttribute="leading" constant="16" id="6nA-Tg-kAC"/>
+                            <constraint firstItem="ajk-PU-1HG" firstAttribute="bottom" secondItem="1cf-ZM-UCp" secondAttribute="bottom" constant="16" id="9Wa-OW-BXn"/>
+                            <constraint firstItem="ajk-PU-1HG" firstAttribute="trailing" secondItem="sQF-rb-If5" secondAttribute="trailing" constant="16" id="CbL-Uj-1m9"/>
+                            <constraint firstItem="1cf-ZM-UCp" firstAttribute="top" secondItem="sQF-rb-If5" secondAttribute="bottom" constant="8" id="M4S-oK-y9d"/>
+                            <constraint firstItem="Nh4-xj-CAM" firstAttribute="leading" secondItem="ajk-PU-1HG" secondAttribute="leading" constant="16" id="evv-8O-f52"/>
+                            <constraint firstItem="ajk-PU-1HG" firstAttribute="trailing" secondItem="Nh4-xj-CAM" secondAttribute="trailing" constant="16" id="l4q-nc-Jd7"/>
+                            <constraint firstItem="Nh4-xj-CAM" firstAttribute="top" secondItem="ajk-PU-1HG" secondAttribute="top" constant="16" id="r85-Tm-ri5"/>
+                            <constraint firstItem="ajk-PU-1HG" firstAttribute="trailing" secondItem="1cf-ZM-UCp" secondAttribute="trailing" constant="16" id="zd0-ta-6ri"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ajk-PU-1HG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Li7-P1-qcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2664.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EN0-Wh-GRe">
