@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		864B2C5E23233775005B8E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B2C5D23233775005B8E32 /* AppDelegate.swift */; };
-		864B2C6023233775005B8E32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B2C5F23233775005B8E32 /* ViewController.swift */; };
+		864B2C6023233775005B8E32 /* ProdutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B2C5F23233775005B8E32 /* ProdutosViewController.swift */; };
 		864B2C6323233775005B8E32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864B2C6123233775005B8E32 /* Main.storyboard */; };
 		864B2C6523233777005B8E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 864B2C6423233777005B8E32 /* Assets.xcassets */; };
 		864B2C6823233777005B8E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864B2C6623233777005B8E32 /* LaunchScreen.storyboard */; };
 		864B2C70232339F2005B8E32 /* icon_nossosprodutos.png in Resources */ = {isa = PBXBuildFile; fileRef = 864B2C6F232339F2005B8E32 /* icon_nossosprodutos.png */; };
+		8677B2282335A1AD00210548 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677B2272335A1AD00210548 /* DetalhesViewController.swift */; };
+		8677B22A2335A1C900210548 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677B2292335A1C900210548 /* AdicionarViewController.swift */; };
+		8677B22C2335A26700210548 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8677B22B2335A26700210548 /* Produto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		864B2C5A23233775005B8E32 /* trabalho-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trabalho-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		864B2C5D23233775005B8E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		864B2C5F23233775005B8E32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		864B2C5F23233775005B8E32 /* ProdutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutosViewController.swift; sourceTree = "<group>"; };
 		864B2C6223233775005B8E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		864B2C6423233777005B8E32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		864B2C6723233777005B8E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		864B2C6923233777005B8E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864B2C6F232339F2005B8E32 /* icon_nossosprodutos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_nossosprodutos.png; path = ../../../Downloads/icon_nossosprodutos.png; sourceTree = "<group>"; };
+		8677B2272335A1AD00210548 /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
+		8677B2292335A1C900210548 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
+		8677B22B2335A26700210548 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				864B2C5D23233775005B8E32 /* AppDelegate.swift */,
-				864B2C5F23233775005B8E32 /* ViewController.swift */,
+				864B2C5F23233775005B8E32 /* ProdutosViewController.swift */,
+				8677B22B2335A26700210548 /* Produto.swift */,
+				8677B2292335A1C900210548 /* AdicionarViewController.swift */,
+				8677B2272335A1AD00210548 /* DetalhesViewController.swift */,
 				864B2C6123233775005B8E32 /* Main.storyboard */,
 				864B2C6F232339F2005B8E32 /* icon_nossosprodutos.png */,
 				864B2C6423233777005B8E32 /* Assets.xcassets */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				864B2C6023233775005B8E32 /* ViewController.swift in Sources */,
+				864B2C6023233775005B8E32 /* ProdutosViewController.swift in Sources */,
 				864B2C5E23233775005B8E32 /* AppDelegate.swift in Sources */,
+				8677B22A2335A1C900210548 /* AdicionarViewController.swift in Sources */,
+				8677B22C2335A26700210548 /* Produto.swift in Sources */,
+				8677B2282335A1AD00210548 /* DetalhesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
