@@ -10,6 +10,10 @@ import UIKit
 
 class AdicionarViewController: UIViewController {
 
+    @IBOutlet weak var textFieldNome: UITextField!
+    @IBOutlet weak var textFieldDescricao: UITextField!
+    @IBOutlet weak var textFieldPreco: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +25,50 @@ class AdicionarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func salvarProduto(_ sender: Any) {
+        if (validarCampos()) {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let produto = Produto(context: context)
+            produto.nome = textFieldNome.text
+            produto.descricao = textFieldDescricao.text
+            produto.preco = Float(textFieldPreco.text!)!
+            context.insert(produto)
+            
+            do {
+                try context.save()
+                let alertController = UIAlertController(title: "Sucesso", message: "Dados inseridos com sucesso", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default) {
+                    (alert) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                present(alertController, animated: true)
+            } catch {
+                let alertController = UIAlertController(title: "Erro", message: "Não foi possível inserir dados", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+                present(alertController, animated: true)
+            }
+        }
     }
-    */
-
+    
+    private func validarCampos() -> Bool {
+        var mensagem: String? = nil
+        if textFieldNome.text!.isEmpty {
+            mensagem = "Preencha o nome"
+        } else if textFieldDescricao.text!.isEmpty {
+            mensagem = "Preencha a descrição"
+        } else if textFieldPreco.text!.isEmpty {
+            mensagem = "Preencha o preço"
+        }
+        
+        if mensagem != nil {
+            let alertController = UIAlertController(title: "Atenção", message: mensagem, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true)
+            return false
+        } else {
+            return true
+        }
+    }
 }

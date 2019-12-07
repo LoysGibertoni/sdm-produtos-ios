@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qW2-MR-Zwh">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NiB-bb-z4k">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +11,7 @@
         <!--Produtos-->
         <scene sceneID="NPe-RG-Q8K">
             <objects>
-                <tableViewController id="qW2-MR-Zwh" customClass="ProdutosViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Produtos" id="qW2-MR-Zwh" customClass="ProdutosViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UjS-Uu-JUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,13 +24,25 @@
                             </constraints>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qvu-gX-FIH">
-                                <rect key="frame" x="0.0" y="128" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basic" textLabel="5GH-Ay-Y3K" style="IBUITableViewCellStyleDefault" id="Qvu-gX-FIH">
+                                <rect key="frame" x="0.0" y="128" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qvu-gX-FIH" id="aS3-jX-FsI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5GH-Ay-Y3K">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="53B-A4-2W4" kind="show" identifier="segueDetalhes" id="RqP-op-oGw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,83 +62,97 @@
             </objects>
             <point key="canvasLocation" x="2055.1999999999998" y="115.59220389805098"/>
         </scene>
-        <!--Adicionar View Controller-->
+        <!--Adicionar-->
         <scene sceneID="YQQ-Ti-Xkm">
             <objects>
-                <viewController id="twe-Ay-WzV" customClass="AdicionarViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Adicionar" id="twe-Ay-WzV" customClass="AdicionarViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BFF-fT-jW0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-fa-cLt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-fa-cLt">
                                 <rect key="frame" x="16" y="80" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJs-aB-hub">
-                                <rect key="frame" x="16" y="109" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJs-aB-hub">
+                                <rect key="frame" x="16" y="109" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-3b-LCr">
-                                <rect key="frame" x="316" y="629" width="43" height="30"/>
-                                <state key="normal" title="Salvar"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-Pe-Rfv">
-                                <rect key="frame" x="16" y="155" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-Pe-Rfv">
+                                <rect key="frame" x="16" y="159" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira a descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9F-5t-YSU">
-                                <rect key="frame" x="16" y="184" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira a descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9F-5t-YSU">
+                                <rect key="frame" x="16" y="188" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-Iv-Umn">
-                                <rect key="frame" x="16" y="230" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-Iv-Umn">
+                                <rect key="frame" x="16" y="238" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o preço" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjE-0b-pxu">
-                                <rect key="frame" x="16" y="259" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o preço" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjE-0b-pxu">
+                                <rect key="frame" x="16" y="267" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-3b-LCr">
+                                <rect key="frame" x="166" y="333" width="43" height="30"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="salvarProduto:" destination="twe-Ay-WzV" eventType="touchUpInside" id="1yr-FG-Cd1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9Je-FN-hpR" firstAttribute="trailing" secondItem="zd1-3b-LCr" secondAttribute="trailing" constant="16" id="XY6-SF-rej"/>
-                            <constraint firstItem="9Je-FN-hpR" firstAttribute="bottom" secondItem="zd1-3b-LCr" secondAttribute="bottom" constant="8" id="nnx-L3-trL"/>
+                            <constraint firstItem="8Vm-fa-cLt" firstAttribute="top" secondItem="9Je-FN-hpR" secondAttribute="top" constant="36" id="2VT-Ti-FIH"/>
+                            <constraint firstItem="9Je-FN-hpR" firstAttribute="trailing" secondItem="zjE-0b-pxu" secondAttribute="trailing" constant="16" id="9UG-EB-WEa"/>
+                            <constraint firstItem="9Je-FN-hpR" firstAttribute="trailing" secondItem="BJs-aB-hub" secondAttribute="trailing" constant="16" id="9Ua-YG-bbH"/>
+                            <constraint firstItem="1h7-Iv-Umn" firstAttribute="top" secondItem="J9F-5t-YSU" secondAttribute="bottom" constant="16" id="Cdr-qN-Ef8"/>
+                            <constraint firstItem="8Vm-fa-cLt" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="EOs-Ua-OBb"/>
+                            <constraint firstItem="zjE-0b-pxu" firstAttribute="top" secondItem="1h7-Iv-Umn" secondAttribute="bottom" constant="8" id="H7X-SN-ZNM"/>
+                            <constraint firstItem="BJs-aB-hub" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="R0W-fG-bjN"/>
+                            <constraint firstItem="1h7-Iv-Umn" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="Szh-5K-Usu"/>
+                            <constraint firstItem="FaD-Pe-Rfv" firstAttribute="top" secondItem="BJs-aB-hub" secondAttribute="bottom" constant="16" id="UDX-8o-8NP"/>
+                            <constraint firstItem="BJs-aB-hub" firstAttribute="top" secondItem="8Vm-fa-cLt" secondAttribute="bottom" constant="8" id="e2u-th-kYG"/>
+                            <constraint firstItem="J9F-5t-YSU" firstAttribute="top" secondItem="FaD-Pe-Rfv" secondAttribute="bottom" constant="8" id="fNb-mt-RTa"/>
+                            <constraint firstItem="zd1-3b-LCr" firstAttribute="top" secondItem="zjE-0b-pxu" secondAttribute="bottom" constant="32" id="lNn-Sd-SqN"/>
+                            <constraint firstItem="zjE-0b-pxu" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="mLw-mW-wo8"/>
+                            <constraint firstItem="zd1-3b-LCr" firstAttribute="centerX" secondItem="BFF-fT-jW0" secondAttribute="centerX" id="tKg-xM-fvV"/>
+                            <constraint firstItem="FaD-Pe-Rfv" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="w4D-Ow-5UM"/>
+                            <constraint firstItem="J9F-5t-YSU" firstAttribute="leading" secondItem="9Je-FN-hpR" secondAttribute="leading" constant="16" id="wLf-MR-Bbw"/>
+                            <constraint firstItem="9Je-FN-hpR" firstAttribute="trailing" secondItem="J9F-5t-YSU" secondAttribute="trailing" constant="16" id="yuW-3J-8nU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Je-FN-hpR"/>
                     </view>
+                    <connections>
+                        <outlet property="textFieldDescricao" destination="J9F-5t-YSU" id="HfU-VR-0wI"/>
+                        <outlet property="textFieldNome" destination="BJs-aB-hub" id="JvN-6R-qZg"/>
+                        <outlet property="textFieldPreco" destination="zjE-0b-pxu" id="7mB-pz-mUM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Bv-rk-Ocw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828" y="117.39130434782609"/>
         </scene>
-        <!--Detalhes View Controller-->
+        <!--Detalhes-->
         <scene sceneID="tXA-QZ-I5F">
             <objects>
-                <viewController id="53B-A4-2W4" customClass="DetalhesViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detalhes" id="53B-A4-2W4" customClass="DetalhesViewController" customModule="trabalho_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtc-Cw-Wx5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notebook Samsung i7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh4-xj-CAM">
-                                <rect key="frame" x="16" y="36" width="343" height="21"/>
+                                <rect key="frame" x="16" y="60" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -140,7 +164,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sQF-rb-If5">
-                                <rect key="frame" x="16" y="65" width="343" height="549"/>
+                                <rect key="frame" x="16" y="89" width="343" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">O notebook gamer Samsung Odyssey foi projetado para quem procura alta performance para games atuais. A combinação do processador Intel de sétima geração, 8GB de memória, 1TB de disco rígido com a placa de vídeo dedicada Nvidia GeForce® GTX 1060 oferece um altíssimo desempenho e qualidade gráfica incrível.Sua tela de LED Full HD antirreflexiva de 15,6'' só faz com que a experiência de se jogar por essa máquina se torne ainda mais memorável e se transforme em uma verdadeira imersão no game.Cada parte do notebook Samsung Odyssey foi pensada para proporcionar a melhor experiência gaming: fácil expansão de memória RAM e SSD, sistema de gerenciamento térmico Hexaflow, teclado retroiluminado, status de sistema e gravação de partidas em tempo real.Agora o jogo ficou sério. Sistema Operacional
 Windows 10 Home
@@ -211,6 +235,7 @@ Samsung Update
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ajk-PU-1HG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g0b-HB-YNT"/>
                     <connections>
                         <outlet property="labelDescricao" destination="sQF-rb-If5" id="957-RP-Sqc"/>
                         <outlet property="labelNome" destination="Nh4-xj-CAM" id="q1s-rj-Pwf"/>
@@ -227,7 +252,7 @@ Samsung Update
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NiB-bb-z4k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2xT-AC-mtE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -241,6 +266,6 @@ Samsung Update
         </scene>
     </scenes>
     <resources>
-        <image name="icon_nossosprodutos.png" width="1612" height="548"/>
+        <image name="icon_nossosprodutos.png" width="386.8800048828125" height="131.52000427246094"/>
     </resources>
 </document>

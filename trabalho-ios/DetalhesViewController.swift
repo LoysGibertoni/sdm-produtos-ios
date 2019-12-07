@@ -10,7 +10,7 @@ import UIKit
 
 class DetalhesViewController: UIViewController {
     
-    var produto: Produto?
+    var produto: Produto? = nil
 
     @IBOutlet weak var labelNome: UILabel!
     @IBOutlet weak var labelDescricao: UITextView!
@@ -19,9 +19,9 @@ class DetalhesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        labelNome.text = produto?.nome
-        labelDescricao.text = produto?.descricao
-        labelPreco.text = "R$ \(produto?.preco)"
+        labelNome?.text = produto?.nome
+        labelDescricao?.text = produto?.descricao
+        labelPreco?.text = "R$ \(produto?.preco ?? 0)"
     }
 
     override func didReceiveMemoryWarning() {
